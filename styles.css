@@ -1,0 +1,285 @@
+:root {
+	--shadow: #4d5055;
+	--svg: #949699;
+	--midtone: #00a2ff;
+	--highlight: #f2faff;
+	--bg: #fbfcfd;
+}
+.midtone {
+	color: var(--midtone);
+}
+.highlight {
+	color: var(--highlight);
+}
+.svg {
+	color: var(--svg);
+}
+
+body {
+	color: var(--shadow);
+	background-color: var(--bg);
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+}
+p {
+	margin: 0.8em 0;
+}
+h3 {
+	font-size: 1.3em;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--svg);
+	border-radius: 10px;
+}
+
+main {
+	margin: 50px auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.font16 {
+	font-size: 16px;
+}
+section {
+	border-radius: 5px;
+	margin: 10px;
+	padding: 2em;
+	-webkit-box-shadow: -2px 2px 13px -2px rgba(77, 80, 85, 0.14);
+	box-shadow: -2px 2px 13px -2px rgba(77, 80, 85, 0.14);
+	background-color: white;
+}
+
+/*section#information*/
+section#information > .parent {
+	display: contents;
+}
+
+section#information > img {
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+section#information h1 {
+	margin-top: -0.5em;
+}
+section#information div p.svg:first-child svg {
+	max-width: 1.2em;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+section#information div p.svg:nth-child(2) svg {
+	max-width: 0.8em;
+	vertical-align: top;
+	margin-left: 0.3em;
+	margin-right: 0.9em;
+}
+section#information p:last-child {
+	margin-top: 1.3em;
+}
+
+/*section#date*/
+section#date {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-flex: 0.5;
+	-ms-flex-positive: 0.5;
+	flex-grow: 0.5;
+}
+
+section#date > .parent {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 2em;
+}
+section#date > .parent > div {
+	max-width: 300px;
+}
+section#date > .parent > div.options {
+	-webkit-box-flex: 2;
+	-ms-flex-positive: 2;
+	flex-grow: 2;
+}
+section#date > .parent .top {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+section#date > .parent .top > p {
+	margin: 0;
+}
+section#date > .parent .top > p:nth-child(2) > span:nth-child(2) {
+	margin-left: 2em;
+}
+section#date .calender table {
+	margin: 1em auto 2em -0.5em;
+}
+section#date .calender table * {
+	text-align: center;
+	font-size: 0.95em;
+}
+section#date .calender table td,
+section#date .calender table th {
+	min-width: 40px;
+	height: 40px;
+}
+
+.selected {
+	color: white;
+	background-color: var(--midtone);
+	border-radius: 100px;
+}
+.taken {
+	color: var(--midtone);
+	background-color: var(--highlight);
+	border-radius: 100px;
+}
+
+.dotted {
+	position: relative;
+}
+.dotted::after {
+	content: ".";
+	font-size: 3em;
+	position: absolute;
+	top: -3%;
+	right: 38%;
+}
+section#date svg {
+	max-width: 1em;
+	margin-right: 0.5em;
+	vertical-align: top;
+}
+
+section#date > .parent .options {
+	margin-left: 2.5em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+section#date > .parent .options > p:first-child {
+	margin-top: 0;
+}
+
+section#date > .parent .options > .time-table {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	min-width: 175px;
+	margin-top: 1em;
+	max-height: 395px;
+	overflow: scroll;
+}
+button.secondary {
+	background-color: white;
+	color: var(--midtone);
+	border: 1px solid currentColor;
+	width: 95%;
+	padding: 1em 1.5em;
+	margin-bottom: 0.5em;
+	border-radius: 3px;
+	font-weight: 900;
+}
+
+/*media queries*/
+@media (max-width: 890px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 850px) {
+	main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+	}
+	section#information > .parent {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+		margin: 0 auto;
+	}
+	section#information > .parent img {
+		-ms-flex-item-align: center;
+		-ms-grid-row-align: center;
+		align-self: center;
+	}
+	section#date {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	section#date > .parent {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	section#date > .parent .options {
+		margin-left: 0;
+		margin-top: 2em;
+	}
+	section#date > .parent .options > p:first-child {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 400px) {
+	section#date > .parent .options > .time-table {
+		max-height: none;
+	}
+	section {
+		padding: 1em;
+	}
+}
